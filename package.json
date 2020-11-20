@@ -33,7 +33,7 @@
     "precommit": "lint-staged",
     "prepare-jar": "node ./scripts/prepare-mvn-package.js",
     "generate-canary-manifest": "node ./scripts/convert-to-canary-manifest.js",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --colors --config ./build_scripts/webpack.config.js",
+    "start": "yarn && cross-env NODE_ENV=development webpack-dev-server --colors --config ./build_scripts/webpack.config.js",
     "starts": "cross-env NODE_ENV=development webpack-dev-server --https --colors --config ./build_scripts/webpack.config.js",
     "start-prod": "cross-env NODE_ENV=production webpack-dev-server --colors --config ./build_scripts/webpack.config.js",
     "test": "npm run lint && npm run jest",
@@ -55,7 +55,7 @@
   },
   "engines": {
     "yarn": "^1.10",
-    "node": "12"
+    "node": "15"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
